@@ -69,19 +69,3 @@ multC (r1, i1) (r2, i2) = (r1 * r2 - i1 * i2, r1 * i2 + i1 * r2)
 
 absC :: (Float, Float) -> Float
 absC (r, i) = sqrt (r^2 + i^2)
-
-{-
-Assignment 3a)
-    fibLouis 4 =
-    (fibLouis (4-1) + fibLouis (4-2)) =
-    (fibLouis 3 + fibLouis (4-2)) =
-    (fibLouis 3 + fibLouis 2) =
-    ((fibLouis (3-1) + fibLouis (3-2)) + (fibLouis (2-1) + fibLouis (2-2)) =
-    ((fibLouis 2 + fibLouis (3-2)) + (fibLouis (2-1) + fibLouis (2-2)) =
-    ((fibLouis 2 + fibLouis 1) + (fibLouis (2-1) + fibLouis (2-2)) =
-    ((fibLouis 2 + fibLouis 1) + (fibLouis (2-1) + fibLouis (2-2)) =
-    ((fibLouis 2 + fibLouis 1) + (fibLouis 1 + fibLouis (2-2)) =
-    ((fibLouis 2 + fibLouis 1) + (fibLouis 1 + fibLouis 0) =
-    ((fibLouis 2 + fibLouis 1) + (fibLouis 1 + fibLouis 0) = ...
--}
-
