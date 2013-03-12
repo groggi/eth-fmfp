@@ -36,15 +36,17 @@ takePrimes n = findPrimes n 1
             | otherwise = take n (listPrimes (a * n))
             
 -- Assignment 4 - merge sort
-{-mergeSort xs = merge left right
+mergeSort [] = []
+mergeSort [x] = [x]
+mergeSort xs = merge left right
     where
-        half xs = length xs `div` 2 -- old version: floor(length(xs) / 2)
+        half xs = div (length xs) 2
         left = mergeSort (take (half xs) xs)
         right = mergeSort (drop (half xs) xs)
         
         merge [] [] = []
-        merge [] xs = xs
-        merge xs [] = xs
-        merge (x:xs) (y:ys)
-            | x < y     = x : merge xs (y:ys)
-            | otherwise = y : merge (x:xs) ys-}
+        merge [] rs = rs
+        merge ls [] = ls
+        merge (l:ls) (r:rs)
+            | l < r = l : (merge ls (r:rs))
+            | otherwise = r : (merge (l:ls) rs)
