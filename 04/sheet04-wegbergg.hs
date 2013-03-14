@@ -17,7 +17,7 @@ split _ [] = []
 split d str = left : split d right
     where
         left = fst (nextPart)
-        right = tail (snd nextPart)
+        right = if length (snd nextPart) > 0 then tail $ snd nextPart else ""
         nextPart = span (/= d) str
         
 -- Assignment 3b
